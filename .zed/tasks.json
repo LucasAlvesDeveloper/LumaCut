@@ -1,0 +1,35 @@
+[
+	{
+		"label": "Configure Project (Debug)",
+		"command": "cmake",
+		"args": [
+			"-S",
+			".",
+			"-B",
+			"build",
+			"-G",
+			"Ninja",
+			"-DCMAKE_BUILD_TYPE=Debug",
+			"-DCMAKE_C_COMPILER=clang",
+		],
+	},
+	{
+		"label": "Configure Project (Release)",
+		"command": "cmake",
+		"args": [
+			"-S",
+			".",
+			"-B",
+			"build",
+			"-G",
+			"Ninja",
+			"-DCMAKE_BUILD_TYPE=Release",
+			"-DCMAKE_C_COMPILER=clang",
+		],
+	},
+	{
+		"label": "Build",
+		"command": "cmake",
+		"args": ["--build", "build"],
+	},
+]
